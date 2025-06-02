@@ -12,7 +12,7 @@ Author: ehem. Aushilfskassierer
 
 # Imports
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk 
 import pygetwindow as gw
 
 # Global variable for saving the current window text
@@ -23,7 +23,7 @@ def refresh_window_list():
     Refreshes the list of all currently open windows with
     titles.
     """
-    windows = gw.getWindowsWithTitle("")  # Alle Fenster
+    windows = gw.getWindowsWithTitle("")  # All windows
     window_titles = [w.title for w in windows if 
                      w.title.strip() != ""]
     combo['values'] = window_titles
@@ -39,7 +39,7 @@ def get_selected_window():
     windows = gw.getWindowsWithTitle(title)
     return windows[0] if windows else None
 
-# -----------------------------------------------------------------------
+# --------------------------------------------------------------
 # Part 2
 
 def update_window_info():
@@ -109,7 +109,7 @@ label = tk.Label(root, textvariable=text_var,
                  padx=10, pady=10)
 label.pack()
 
-# -----------------------------------------------------------------------
+# --------------------------------------------------------------
 # Part 4
 
 # Aspect ratio input
